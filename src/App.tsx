@@ -1,4 +1,4 @@
-import { GitHubBanner, Refine, WelcomePage } from "@refinedev/core";
+import { Refine } from "@refinedev/core";
 import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 
@@ -48,9 +48,9 @@ function App() {
                   create: "/subjects/create",
                   meta: {
                     label: "Subjects",
-                    icon: <BookOpen />
-                  }
-                }
+                    icon: <BookOpen />,
+                  },
+                },
               ]}
             >
               <Routes>
@@ -63,8 +63,8 @@ function App() {
                 >
                   <Route path="/" element={<Dashboard />} />
                   <Route path="/subjects">
-                    <Route index element={<SubjectsList/>} />
-                    <Route path="create" element={<SubjectsCreate/>} />
+                    <Route index element={<SubjectsList />} />
+                    <Route path="create" element={<SubjectsCreate />} />
                   </Route>
                 </Route>
               </Routes>
